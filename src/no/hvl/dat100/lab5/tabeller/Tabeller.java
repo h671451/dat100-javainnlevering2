@@ -54,19 +54,23 @@ public class Tabeller {
 	// b)
 	public static String tilStreng(int[] tabell) {
 
-		System.out.print("\"[");
-		String komma = ",";
+        String a = "\"[";
 
-		int i = 0;
-	
-		while(i<tabell.length) {
-			int j = tabell[i];
-			System.out.print(j+komma);
-		i++;	
-		}
-		
-		String x = "]\"";
-		return x;
+        for (int i = 0; i < tabell.length; i++) {
+
+            if (i == 0) {
+                a = a + tabell[i];
+            }
+
+            else {
+                a = a + "," + tabell[i];
+
+            }
+
+        }
+
+        a = a + "]\"";
+        return a;
 		
 	}
 
